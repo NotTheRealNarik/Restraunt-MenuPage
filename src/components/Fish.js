@@ -1,5 +1,7 @@
 import React from 'react'
 import {formatPrice} from '../helpers'
+import PropTypes from 'prop-types';
+
 class Fish extends React.Component{
     render(){
         const details = this.props.details
@@ -19,6 +21,12 @@ class Fish extends React.Component{
             </li>
         )
     }
+}
+
+Fish.propType = {
+    details : PropTypes.object.isRequired,
+    index : PropTypes.string.isRequired,
+    addToOrder : PropTypes.func.isRequired
 }
 
 export default Fish
