@@ -121,7 +121,8 @@ class App extends React.Component{
                            loadSamples={this.loadSamples}
                            fishes = {this.state.fishes}
                            updateFish = {this.updateFish}
-                           removeFish = {this.removeFish}/> {/* passing addFish method as prop to inventory.js*/}
+                           removeFish = {this.removeFish}
+                           storeId = {this.props.match.params.storeId}/> {/* passing addFish method as prop to inventory.js*/}
 
 
             </div>
@@ -130,8 +131,7 @@ class App extends React.Component{
 }
 
 App.propTypes= {
-    params: PropTypes.object.isRequired
-    
+    match: PropTypes.object.isRequired
 }
 
 

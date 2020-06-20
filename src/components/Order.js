@@ -14,7 +14,7 @@ class Order extends React.Component{
     renderOrder(key){
         const fish = this.props.fishes[key]
         const count = this.props.order[key]
-        const removeButton = <button class="block" onClick={()=>this.props.removeOrder(key)}>-1bs</button>
+        const removeButton = <button onClick={()=>this.props.removeOrder(key)}>-1bs</button>
         
 
         if (!fish ||fish.status === 'unavailable'){
@@ -59,7 +59,7 @@ class Order extends React.Component{
             return prevTotal
         },0); // 0 here is the starting value
         return(
-            <div class="order-wrap">
+            <div className="order-wrap">
                 <h2>Your Order</h2>
                 <ul  
                 className='order'
